@@ -1,0 +1,16 @@
+One of the challenges of working in a non-profit organization is managing limited resources, particularly when it comes to funding. Sometimes the reality often requires creative solutions when resources are scarce.
+
+Recently, we faced the need to monitor all users in the organization using Office 365, especially to ensure that we weren’t over-allocating licenses. We have an A1 license, which doesn’t provide a comprehensive and convenient overview of user activity, requiring us to manually check user logs instead.
+
+To address this challenge, I developed a PowerShell script with the following steps:
+
+The script gathers all active users in the organization into a list.
+Once a week, the script identifies users who logged into the system during the past week.
+It updates the list by removing the mailboxes of users who logged in.
+A new file is generated with the run results and date for issue tracking.
+
+To ensure the script runs automatically and without issues, we scheduled it to run weekly on an organizational machine.
+
+After several months of operation, we concluded that users who still appear on the list are likely inactive, and we identified around 600 unnecessary licenses that can be removed.
+
+What did I learn from this process? Nothing is impossible. Despite budget constraints, with creative thinking and determination, you can find a solution to any challenge. Additionally, managing access to the organization is crucial – thanks to running this script, we were able to identify irrelevant users and significantly reduce our licensing costs.
